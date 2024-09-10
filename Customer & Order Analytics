@@ -1,0 +1,7 @@
+#In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
+
+#1. List all the products sold in Los Angeles in February, and include how many of each were sold. 
+SELECT product,SUM(quantity)
+FROM BIT_DB.FebSales
+WHERE Location like '%Los Angeles%'
+GROUP BY Product
